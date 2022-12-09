@@ -43,10 +43,12 @@ module Dox
         return [] if path_params.nil?
 
         path_params.map do |param, value|
-          { name: param,
+          {
+            name: param,
             in: :path,
-            schema: { type: guess_param_type(value) },
-            example: value }
+            required: true,
+            schema: { type: guess_param_type(value), example: value }
+          }
         end
       end
 

@@ -17,7 +17,10 @@
           {
             "name": "Accept",
             "in": "header",
-            "example": "application/json"
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
           }
         ],
         "responses": {
@@ -42,7 +45,10 @@
             },
             "headers": {
               "Content-Type": {
-                "description": "application/json"
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
               }
             }
           }
@@ -60,7 +66,10 @@
           {
             "name": "Accept",
             "in": "header",
-            "example": "application/json"
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
           }
         ],
         "requestBody": {
@@ -105,7 +114,10 @@
             },
             "headers": {
               "Content-Type": {
-                "description": "application/json"
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
               }
             }
           }
@@ -123,15 +135,19 @@
           {
             "name": "id",
             "in": "path",
+            "required": true,
             "schema": {
-              "type": "string"
-            },
-            "example": 14
+              "type": "string",
+              "example": 14
+            }
           },
           {
             "name": "Accept",
             "in": "header",
-            "example": "application/json"
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
           }
         ],
         "responses": {
@@ -157,7 +173,10 @@
             },
             "headers": {
               "Content-Type": {
-                "description": "application/json"
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
               }
             }
           }
@@ -175,7 +194,10 @@
           {
             "name": "Accept",
             "in": "header",
-            "example": "application/json"
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
           }
         ],
         "responses": {
@@ -210,7 +232,10 @@
             },
             "headers": {
               "Content-Type": {
-                "description": "application/json"
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
               }
             }
           }
