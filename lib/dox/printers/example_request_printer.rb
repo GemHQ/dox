@@ -52,13 +52,13 @@ module Dox
 
       def acquire_header_params
         example.request_headers.map do |key, value|
-          { name: key, in: :header, example: value }
+          { name: key, in: :header, schema: { example: value, type: 'string' } }
         end
       end
 
       def add_new_header_params(header_params)
         example.request_headers.each do |key, value|
-          header_params.push(name: key, in: :header, example: value) unless
+          header_params.push(name: key, in: :header, schema: { type: 'string', example: value }) unless
             header_params.detect { |hash| hash[:name] == key }
         end
 

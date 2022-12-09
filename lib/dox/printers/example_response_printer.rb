@@ -79,7 +79,8 @@ module Dox
       end
 
       def add_headers(body)
-        body['headers'] = Hash[example.response_headers.map { |key, value| [key, { description: value }] }]
+        body['headers'] = Hash[example.response_headers
+                                      .map { |key, value| [key, { schema: { type: "string", example: value } }] }]
       end
     end
   end
